@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane hgap="8.0" prefHeight="350.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.deitel.exercicios.Capitulo27.Cap27_1.AppUsingGradient">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="0.0" />
+    <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <VBox spacing="8.0">
+         <children>
+            <TitledPane animated="false" text="Gradient Type">
+               <content>
+                  <VBox spacing="8.0">
+                     <children>
+                        <RadioButton fx:id="radialRadioButton" mnemonicParsing="false" onAction="#gradientTypeRadioButtonSelected" selected="true" text="Radial">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="gradientTypeToggleGroup" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton fx:id="linearRadioButton" mnemonicParsing="false" onAction="#gradientTypeRadioButtonSelected" text="Linear" toggleGroup="$gradientTypeToggleGroup" />
+                     </children>
+                  </VBox>
+               </content>
+            </TitledPane>
+            <TitledPane animated="false" text="Gradient Property">
+               <content>
+                  <GridPane hgap="8.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label text="Starting" />
+                        <Label text="Ending" GridPane.rowIndex="1" />
+                        <TextField fx:id="startingTextField" text="50" GridPane.columnIndex="1" />
+                        <TextField fx:id="endingTextField" text="50" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                     </children>
+                  </GridPane>
+               </content>
+            </TitledPane>
+            <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#applyButtonPressed" text="Apply" />
+         </children>
+      </VBox>
+      <Rectangle fx:id="rectangle" arcHeight="5.0" arcWidth="5.0" height="300.0" stroke="BLACK" strokeType="INSIDE" width="300.0" GridPane.columnIndex="1">
+         <fill>
+            <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop color="#be1fda" />
+                  <Stop color="#be1fda" offset="0.007662835249042145" />
+                  <Stop color="BLACK" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </fill>
+      </Rectangle>
+   </children>
+   <padding>
+      <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+   </padding>
+</GridPane>

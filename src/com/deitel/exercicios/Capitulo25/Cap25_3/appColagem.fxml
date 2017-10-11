@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" prefWidth="100.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ImageView pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../Desktop/15-01-2013.jpg" />
+         </image>
+      </ImageView>
+      <Label text="Em 15 de Janeiro de de 1929 Martin Luther King, Jr., filho de um ministro baptista, nasceu em Atlanta, Geórgia." textAlignment="CENTER" textOverrun="CLIP" wrapText="true">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <padding>
+            <Insets bottom="8.0" />
+         </padding>
+      </Label>
+      <ImageView fitWidth="630.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../Desktop/0829D.jpg" />
+         </image>
+      </ImageView>
+      <Label text="Tudo aquilo que passou por nós, faz parte da história, seja ela pessoal ou até mesmo mundial." textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <padding>
+            <Insets bottom="8.0" />
+         </padding>
+      </Label>
+   </children>
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
+   <padding>
+      <Insets bottom="14.0" left="14.0" right="14.0" top="14.0" />
+   </padding>
+</VBox>
